@@ -1,0 +1,68 @@
+{
+  "name": "cezerin",
+  "version": "0.33.0",
+  "description": "Cezerin is React and Node.js based eCommerce platform. https://chost.ansiglobal.com",
+  "keywords": [
+    "cezerin",
+    "cezerin2",
+    "ecommerce",
+    "shopping cart",
+    "shop",
+    "cms",
+    "cezerin api",
+    "cezerin ajax",
+    "cezerin web store",
+    "ecommerce api",
+    "shopping cart api"
+  ],
+  "homepage": "https://chost.ansiglobal.com",
+  "bugs": "https://github.com/Cezerin2/cezerin2/issues",
+  "license": "AGPL-3.0-or-later",
+  "author": "Restmount <jsonmount@gmail.com> (https://github.com/restmount)",
+  "main": "src/server/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cezerin2/cezerin2"
+  },
+  "packageManager": "yarn@4.1.1",
+  "workspaces": [
+    "src/admin",
+    "src/client",
+    "src/server",
+    "src/store",
+    "src/themes/default",
+    "src/themes/fullfluid",
+    "src/themes/plusha",
+    "src/themes/template",
+    "theme"
+  ],
+  "scripts": {
+    "setup": "yarn src/server setup",
+    "theme:export": "./scripts/theme-export.sh",
+    "theme:install": "./scripts/theme-install.sh",
+    "build:store": "yarn src/store build",
+    "build:admin": "yarn src/admin build",
+    "build": "conc 'npm:build:*'",
+    "start:store": "yarn src/store start",
+    "start:server": "yarn src/server start",
+    "start": "conc 'npm:start:*'",
+    "watch:store": "yarn src/store watch",
+    "watch:admin": "yarn src/admin start",
+    "watch:server": "yarn src/server watch",
+    "watch": "conc 'npm:watch:*'",
+    "lint": "eslint --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "typescript": "^5.4.3"
+  }
+}
