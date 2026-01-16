@@ -57,6 +57,8 @@ function Header() {
         {/* Logo Section */}
         <div>
           <Link to={"/"}>
+          {/* <img src="" alt="My Image" /> */}
+          
             <Logo w={90} h={50} />
           </Link>
         </div>
